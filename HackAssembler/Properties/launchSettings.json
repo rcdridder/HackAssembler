@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "HackAssembler": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\Users\\rderi\\Nand2Tetris\\nand2tetris\\projects\\06\\pong\\Pong.asm\r\n\r\n"
+    }
+  }
+}
