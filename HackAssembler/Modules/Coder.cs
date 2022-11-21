@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using HackAssembler.Interfaces;
 
 namespace HackAssembler.Modules
 {
-    public class CodeModule
+    public class Coder : ICoder
     {
         public string Dest(string dest)
         {
-            switch(dest)
+            switch (dest)
             {
                 case "_": return "000";
                 case "M": return "001";
@@ -34,7 +30,7 @@ namespace HackAssembler.Modules
 
         public string Comp(string comp)
         {
-            switch(comp)
+            switch (comp)
             {
                 case "0": return "0101010";
                 case "1": return "0111111";
@@ -70,12 +66,12 @@ namespace HackAssembler.Modules
 
         public string Jump(string jump)
         {
-            switch(jump)
+            switch (jump)
             {
                 case "_": return "000";
                 case "JGT": return "001";
                 case "JEQ": return "010";
-                case "JGE": return "011"; 
+                case "JGE": return "011";
                 case "JLT": return "100";
                 case "JNE": return "101";
                 case "JLE": return "110";

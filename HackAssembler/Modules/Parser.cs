@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
+﻿using HackAssembler.Interfaces;
 
 namespace HackAssembler.Modules
 {
-    public class ParserModule
+    public class Parser: IParser
     {
         private StreamReader file;
 
-        public ParserModule(StreamReader file)
+        public Parser(StreamReader file)
         {
             this.file = file;
         }

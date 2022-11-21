@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using HackAssembler.Interfaces;
 
 namespace HackAssembler.Modules
 {
-    public class SymbolModule
+    public class Symbols : ISymbols
     {
         private Dictionary<string, int> symbols;
-        private Dictionary<string, int> preDefinedSymbols = new() 
+        private Dictionary<string, int> preDefinedSymbols = new()
         {
             { "R0", 0 },
             { "R1", 1 },
@@ -35,10 +31,10 @@ namespace HackAssembler.Modules
             { "THIS", 3 },
             { "THAT", 4 },
         };
-        public SymbolModule(Dictionary<string, int> symbols)
+        public Symbols(Dictionary<string, int> symbols)
         {
             this.symbols = symbols;
-            foreach(var symbol in preDefinedSymbols)
+            foreach (var symbol in preDefinedSymbols)
             {
                 symbols.Add(symbol.Key, symbol.Value);
             }
