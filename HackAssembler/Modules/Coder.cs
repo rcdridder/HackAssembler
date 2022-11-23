@@ -50,16 +50,22 @@ namespace HackAssembler.Modules
                 case "D-1": return "0001110";
                 case "A-1": return "0110010";
                 case "M-1": return "1110010";
+                case "A+D": return "0000010";
                 case "D+A": return "0000010";
                 case "D+M": return "1000010";
+                case "M+D": return "1000010";
                 case "D-A": return "0010011";
                 case "D-M": return "1010011";
                 case "A-D": return "0000111";
                 case "M-D": return "1000111";
+                case "A&D": return "0000000";
                 case "D&A": return "0000000";
                 case "D&M": return "1000000";
+                case "M&D": return "1000000";
+                case "A|D": return "0010101";
                 case "D|A": return "0010101";
                 case "D|M": return "1010101";
+                case "M|D": return "1010101";
                 default: throw new ArgumentException("Invalid computation instruction");
             }
         }
